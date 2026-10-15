@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function ResumeBuilder() {
-  return (
-    <div>
-      Resume Builder
-    </div>
-  )
+  return <div>Resume Builder</div>;
 }
 
-export default ResumeBuilder
+export default ResumeBuilder;
