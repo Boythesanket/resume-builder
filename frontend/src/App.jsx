@@ -1,7 +1,16 @@
 import React from "react";
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
 
 function App() {
-  return <div className="font-bold">hello</div>;
+  return (
+    <>
+      <Routes>
+        <Route element={<Home />} path="/" />
+        <Route element={<Layout />} path="app"/>
+      </Routes>
+    </>
+  );
 }
 
 export default App;
