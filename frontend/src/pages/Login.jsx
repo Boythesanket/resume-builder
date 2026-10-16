@@ -1,7 +1,10 @@
+import { User2Icon } from "lucide-react";
 import React from "react";
 
 function Login() {
-  const [state, setState] = React.useState("login");
+  const query = new URLSearchParams(window.location.search);
+  const urlState = query.get("state");
+  const [state, setState] = React.useState(urlState || "login");
 
   const [formData, setFormData] = React.useState({
     name: "",
@@ -19,7 +22,7 @@ function Login() {
   };
 
   return (
-    <div className="p-2 flex flex-col mx-auto items-center justify-center min-h-screen">
+    <div className="p-2 flex flex-col mx-auto items-center justify-center min-h-screen  bg-[url(https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/hero/green-gradient-bg.svg)]">
       <form
         onSubmit={handleSubmit}
         className="sm:w-87.5 w-full text-center bg-gray-900 border border-gray-800 rounded-2xl px-8"
@@ -28,7 +31,7 @@ function Login() {
           {state === "login" ? "Login" : "Sign up"}
         </h1>
 
-        <p className="text-gray-400 text-sm mt-2">Please sign in to continue</p>
+        <p className="text-gray-400 text-sm mt-2">Please {state} to continue</p>
 
         {state !== "login" && (
           <div className="flex items-center mt-6 w-full bg-gray-800 border border-gray-700 h-12 rounded-full overflow-hidden pl-6 gap-2 ">
