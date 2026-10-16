@@ -3,10 +3,10 @@ import React from "react";
 function CallToAction() {
   return (
     <div id="CTA">
-      <div className="mt-28 border-y border-dashed border-slate-200 w-full max-w-5xl mx-auto px-10 sm:px-16">
-        <div className="flex flex-col md:flex-row text-center md:text-left items-center justify-between gap-8 px-3 md:px-10 border-x border-dashed border-slate-200 py-16 sm:py-20 -mt-10 -mb-10 w-full">
-          <p className="text-xl font-medium max-w-md text-slate-400">
-            Star the repo and join the growing PrebuiltUI community.
+      <div className="mt-30 border-y border-dashed w-full max-w-5xl mx-auto px-10 sm:px-16">
+        <div className="flex flex-col md:flex-row text-center md:text-left items-center justify-between gap-8 px-3 md:px-10 border-x border-dashed py-16 sm:py-20 -mt-10 -mb-10 w-full">
+          <p className="text-xl font-medium max-w-md text-slate-400 capitalize">
+            Build a professional resume that helps you stand out and get hired
           </p>
           <a
             target="_blank"

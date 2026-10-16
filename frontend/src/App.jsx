@@ -19,7 +19,7 @@ function App() {
         </Route>
 
         <Route element={<Preview />} path="view/:resumeId" />
-        <Route element={<Login />} path="login" />
+        <Route element={<Login />} path="/login" />
       </Routes>
     </>
   );
