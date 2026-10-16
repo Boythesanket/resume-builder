@@ -1,36 +1,37 @@
 import React from "react";
 import { Zap } from "lucide-react";
+import Title from "./Title";
 
 const Features = () => {
-  const [isHover, setIsHover] = React.useState(false);
-
   return (
     <div
       id="features"
-      className="scroll-mt-12 flex flex-col items-center my-10"
+      className="scroll-mt-12 flex flex-col items-center my-10 bg-[url(https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/hero/green-gradient-bg.svg)]"
     >
       <div className="flex items-center gap-2 text-sm text-green-500 bg-green-400/10 rounded-full px-6 py-1.5">
-        <Zap width={11} />
+        <Zap width={14} />
         <span>Simple Process</span>
       </div>
-      <div className="bg-[url(https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/hero/green-gradient-bg.svg)] flex flex-col md:flex-row items-center justify-center">
+      <Title
+        title={"Build your resume"}
+        description={
+          "Our streamlined process helps you create a professional resume in minutes with intelligent AI-powered tools and features."
+        }
+      />
+      <div className="flex flex-col md:flex-row items-center justify-center xl:-mt-10">
         <img
           className="max-w-2xl w-full xl:-ml-32"
           src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/features/group-image-1.png"
           alt=""
         />
-        <div
-          className="px-4 md:px-0"
-          onMouseEnter={() => setIsHover(true)}
-          onMouseLeave={() => setIsHover(false)}
-        >
+        <div className="px-4 md:px-0">
           <div
             className={
               "flex items-center justify-center gap-6 max-w-md group cursor-pointer"
             }
           >
             <div
-              className={`p-6 group-hover:bg-green-300 border border-transparent group-hover:border-green-300  flex gap-4 rounded-xl transition-colors ${!isHover ? "border-green-300 bg-green-200" : ""}`}
+              className={`p-6 group-hover:bg-transparent border border-transparent group-hover:border-blue-300  flex gap-4 rounded-xl transition-colors`}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -48,17 +49,17 @@ const Features = () => {
                 <circle cx="16.5" cy="7.5" r=".5" fill="currentColor" />
               </svg>
               <div className="space-y-2">
-                <h3 className="text-base font-semibold text-slate-700">
+                <h3 className="text-base font-semibold text-slate-300">
                   Real-Time Analytics
                 </h3>
-                <p className="text-sm text-slate-600 max-w-xs">
+                <p className="text-sm text-slate-500 max-w-xs">
                   Get instant insights into your finances with live dashboards.
                 </p>
               </div>
             </div>
           </div>
           <div className="flex items-center justify-center gap-6 max-w-md group cursor-pointer">
-            <div className="p-6 group-hover:bg-green-100 border border-transparent group-hover:border-green-300 flex gap-4 rounded-xl transition-colors">
+            <div className="p-6 group-hover:bg-transparent border border-transparent group-hover:border-green-300 flex gap-4 rounded-xl transition-colors">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -75,17 +76,17 @@ const Features = () => {
                 <path d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z" />
               </svg>
               <div className="space-y-2">
-                <h3 className="text-base font-semibold text-slate-700">
+                <h3 className="text-base font-semibold text-slate-300">
                   Bank-Grade Security
                 </h3>
-                <p className="text-sm text-slate-600 max-w-xs">
+                <p className="text-sm text-slate-500 max-w-xs">
                   End-to-end encryption, 2FA, compliance with GDPR standards.
                 </p>
               </div>
             </div>
           </div>
           <div className="flex items-center justify-center gap-6 max-w-md group cursor-pointer">
-            <div className="p-6 group-hover:bg-orange-100 border border-transparent group-hover:border-orange-300 flex gap-4 rounded-xl transition-colors">
+            <div className="p-6 group-hover:bg-transparent border border-transparent group-hover:border-orange-300 flex gap-4 rounded-xl transition-colors">
               <svg
                 className="size-6 stroke-orange-600"
                 xmlns="http://www.w3.org/2000/svg"
@@ -103,10 +104,10 @@ const Features = () => {
                 <path d="m7 10 5 5 5-5" />
               </svg>
               <div className="space-y-2">
-                <h3 className="text-base font-semibold text-slate-700">
+                <h3 className="text-base font-semibold text-slate-200">
                   Customizable Reports
                 </h3>
-                <p className="text-sm text-slate-600 max-w-xs">
+                <p className="text-sm text-slate-500 max-w-xs">
                   Export professional, audit-ready financial reports for tax or
                   internal review.
                 </p>
