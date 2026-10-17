@@ -85,8 +85,9 @@ function Dashboard() {
             </p>
           </button>
         </div>
-        <hr className="border-slate-300 my-6 sm:w-76.25" />
 
+        <hr className="border-slate-300 my-6 sm:w-76.25" />
+        
         <div className="grid grid-cols-2 sm:flex flex-wrap gap-4">
           {allResumes.map((resume, index) => {
             const baseColor = colors[index % colors.length];
