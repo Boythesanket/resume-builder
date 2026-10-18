@@ -43,6 +43,8 @@ function ResumeBuilder() {
           Back to Dashboard
         </Link>
       </div>
+
+      <div className="grid grid-cols-10"></div>
     </div>
   );
 }
