@@ -44,7 +44,9 @@ function ResumeBuilder() {
         </Link>
       </div>
 
-      <div className="grid grid-cols-10"></div>
+      <div className="grid grid-cols-6">
+        
+      </div>
     </div>
   );
 }
