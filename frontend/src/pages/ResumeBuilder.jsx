@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { dummyResumeData } from "../assets/assets";
 import { ArrowLeftIcon } from "lucide-react";
@@ -6,7 +6,7 @@ import { ArrowLeftIcon } from "lucide-react";
 function ResumeBuilder() {
   const { resumeId } = useParams();
 
-  const [resumeData, setResumeData] = React.useState({
+  const [resumeData, setResumeData] = useState({
     _id: "",
     title: "",
     personal_info: {},
