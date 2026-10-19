@@ -45,7 +45,7 @@ function ResumeBuilder() {
       </div>
 
       <div className="grid grid-cols-6">
-        
+        <button></button><button></button><button></button><button></button><button></button>
       </div>
     </div>
   );
