@@ -1,7 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { dummyResumeData } from "../assets/assets";
-import { ArrowLeftIcon } from "lucide-react";
+import {
+  ArrowLeftIcon,
+  Briefcase,
+  FileText,
+  FolderIcon,
+  GraduationCap,
+  User,
+} from "lucide-react";
 
 function ResumeBuilder() {
   const { resumeId } = useParams();
@@ -28,6 +35,14 @@ function ResumeBuilder() {
     }
   };
 
+  const sections = [
+    { id: "personal", name: "Personal Info", icon: User },
+    { id: "summary", name: "Summary", icon: FileText },
+    { id: "experience", name: "Experience", icon: Briefcase },
+    { id: "education", name: "Education", icon: GraduationCap },
+    { id: "projects", name: "Projects", icon: FolderIcon },
+  ];
+
   useEffect(() => {
     loadExistingResume();
   }, []);
@@ -44,8 +59,8 @@ function ResumeBuilder() {
         </Link>
       </div>
 
-      <div className="grid grid-cols-6">
-        <button></button><button></button><button></button><button></button><button></button>
+      <div className="max-w-7xl mx-auto px-4 pb-8">
+        <div className="grid lg:grid-cols-12 gap-8"></div>
       </div>
     </div>
   );
