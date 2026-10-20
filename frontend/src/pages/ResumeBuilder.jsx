@@ -120,6 +120,8 @@ function ResumeBuilder() {
                         personal_info: data,
                       }))
                     }
+                    removeBackground={removeBackgroud}
+                    setRemoveBackground={setRemoveBackground}
                   />
                 )}
               </div>
