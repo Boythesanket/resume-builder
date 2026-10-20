@@ -111,7 +111,17 @@ function ResumeBuilder() {
 
               {/* form content */}
               <div className="space-y-6">
-                {activeSection.id === "personal" && <PersonalInfoForm />}
+                {activeSection.id === "personal" && (
+                  <PersonalInfoForm
+                    data={resumeData.personal_info}
+                    onChange={(data) =>
+                      setResumeData((prev) => ({
+                        ...prev,
+                        personal_info: data,
+                      }))
+                    }
+                  />
+                )}
               </div>
             </div>
           </div>

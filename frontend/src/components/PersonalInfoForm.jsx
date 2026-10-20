@@ -1,7 +1,12 @@
 import { User } from "lucide-react";
 import React from "react";
 
-function PersonalInfoForm({ data, onChange }) {
+function PersonalInfoForm({
+  data,
+  onChange,
+  removeBackground,
+  setRemoveBackground,
+}) {
   function handleChange(field, value) {
     onChange({ ...data, [field]: value });
   }
@@ -37,9 +42,27 @@ function PersonalInfoForm({ data, onChange }) {
             type="file"
             accept="imgae/jpeg, image/png"
             className="hidden"
-            onChange={(e) => handleChange("image", e.target.files)}
+            onChange={(e) => handleChange("image", e.target.files[0])}
           />
         </label>
+
+        {typeof data.image === "object" && (
+          <div className="flex flex-col gap-1 pl-4 text-sm">
+            <p>Remove Background</p>
+            <label className="relative inline-flex items-center cursor-pointer text-gray-900 gap-3">
+              <input
+                type="checkbox"
+                className="sr-only peer"
+                onChange={(e) => setRemoveBackground((prev) => !prev)}
+                checked={removeBackground}
+              />
+
+              <div className="w-9 h-5 bg-slate-300 rounded-full peer peer-checked:bg-green-600 transition-colors duration-200"></div>
+
+              <span className="dot absolute left-1 top-1 w-3 h-3 bg-white rounded-full transition-transform duration-200 ease-in-out peer-checked:translate-x-4"></span>
+            </label>
+          </div> 
+        )}
       </div>
     </div>
   );
