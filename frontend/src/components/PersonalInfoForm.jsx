@@ -11,6 +11,23 @@ function PersonalInfoForm({
     onChange({ ...data, [field]: value });
   }
 
+  const fields = [
+    {
+      key: "full_name",
+      label: "Full Name",
+      icon: User,
+      type: "text",
+      required: true,
+    },
+    {
+      key: "email",
+      label: "Full Name",
+      icon: User,
+      type: "text",
+      required: true,
+    },
+  ];
+
   return (
     <div>
       <h3 className="text-lg font-semibold text-gray-900">
@@ -61,7 +78,7 @@ function PersonalInfoForm({
 
               <span className="dot absolute left-1 top-1 w-3 h-3 bg-white rounded-full transition-transform duration-200 ease-in-out peer-checked:translate-x-4"></span>
             </label>
-          </div> 
+          </div>
         )}
       </div>
     </div>
