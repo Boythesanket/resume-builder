@@ -120,7 +120,7 @@ function PersonalInfoForm({
         )}
       </div>
 
-      {fields.map((field, index) => {
+      {fields.map((field) => {
         const Icon = field.icon;
         return (
           <div key={field.key} className="space-y-1 mt-5">
