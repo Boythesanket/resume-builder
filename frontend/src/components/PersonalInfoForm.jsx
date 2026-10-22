@@ -29,7 +29,7 @@ function PersonalInfoForm({
     },
     {
       key: "email",
-      label: "Full Name",
+      label: "Email Id",
       icon: Mail,
       type: "email",
       required: true,
